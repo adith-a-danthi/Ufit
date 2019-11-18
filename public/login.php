@@ -4,20 +4,20 @@
     <title>Login</title>
 </head>
 <body>
-<nav class="navbar navbar-light bg-light">
+<nav class="navbar navbar-dark bg-dark">
     <a class="navbar-brand" href="index.php">Gym</a>
 </nav>
 <br>
 <div class="card" style="width: 30%; border-radius: 25px; margin-left: auto; margin-right: auto">
     <div class="card-body" >
-        <div class="form-group">
+        <form action="login.php" method="post">
             <h5>Login</h5> <br>
             <input type="email" class="form-control" id="email_id" placeholder="Email id">
             <br>
             <input type="password" class="form-control" id="password" placeholder="Password">
             <br>
-            <a class="btn btn-outline-dark" role="button">Login</a>
-        </div>
+            <button class="btn btn-outline-dark">Login</button>
+        </form>
     </div>
 </div>
 </body>
