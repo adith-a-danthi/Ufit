@@ -12,9 +12,9 @@
     <div class="card-body" >
         <form action="login.php" method="post">
             <h5>Login</h5> <br>
-            <input type="email" class="form-control" id="email_id" placeholder="Email id">
+            <input type="email" class="form-control" id="email_id" placeholder="Email id" required>
             <br>
-            <input type="password" class="form-control" id="password" placeholder="Password">
+            <input type="password" class="form-control" id="password" placeholder="Password" required>
             <br>
             <button class="btn btn-outline-dark">Login</button>
         </form>

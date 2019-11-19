@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 <head>
     <title>Home</title>
 </head>
@@ -13,31 +14,31 @@
     <h3 style="margin: auto">Account Info</h3>
     <div class="card-body">
         <div class="row">
-            <div class="column" style="margin: auto" id="name">
+            <div class="column" style="margin: auto;width:200px" id="name">
                 <h5 class="card-title">Name</h5>
                 <h6 class="text-muted" id="email">lorem ipsum</h6>
             </div>
-            <div class="column" style="margin: auto" id="email">
+            <div class="column" style="margin: auto;width:200px" id="email">
                 <h5 class="card-title">Email</h5>
                 <h6 class="text-muted" id="email">lorem.ipsum@lorem.ipsum</h6>
             </div>
-            <div class="column" style="margin: auto" id="phone">
+            <div class="column" style="margin: auto;width:200px" id="phone">
                 <h5 class="card-title">Phone No.</h5>
                 <h6 class="text-muted" id="phone">lorem ipsum</h6>
             </div>
         </div>
         <br>
         <div class="row">
-            <div class="column" style="margin: auto" id="dob">
+            <div class="column" style="margin: auto;width:200px" id="dob">
                 <h5 class="card-title">DOB</h5>
                 <h6 class="text-muted" id="email">lorem ipsum</h6>
             </div>
-            <div class="column" style="margin: auto" id="gender">
+            <div class="column" style="margin: auto;width:200px" id="gender">
                 <h5 class="card-title">Gender</h5>
-                <h6 class="text-muted" id="email">lorem.ipsum@lorem.ipsum</h6>
+                <h6 class="text-muted" id="email">lorem ipsum</h6>
             </div>
-            <div class="column" style="margin: auto" id="batch">
-                <h5 class="card-title">Batch</h5>
+            <div class="column" style="margin: auto;width:200px" id="address">
+                <h5 class="card-title">Address</h5>
                 <h6 class="text-muted" id="phone">lorem ipsum</h6>
             </div>
         </div>

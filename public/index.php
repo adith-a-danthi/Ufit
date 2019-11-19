@@ -2,12 +2,6 @@
 <head>
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="#" >Gym</a>
-        <ul>
-            <li>
-                <a></a>
-                <a>Contact Us</a>
-            </li>
-        </ul>
         <div>
             <a class="btn btn-outline-secondary" href="register.php" role="button">Register</a>
             <a class="btn btn-outline-light" href="login.php" role="button">Login</a>
