@@ -9,7 +9,7 @@
 </head>
 <body>
 <nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="index.php">Gym</a>
+    <a class="navbar-brand" href="index.php">Ufit</a>
 </nav>
 <br>
 <div class="card" style="width: 50%; border-radius: 25px; margin-left: auto; margin-right: auto">
@@ -18,11 +18,11 @@
             <h5 style="text-align: center">Create Account</h5>
             <br>
             <h6>Basic Details</h6>
-            <input type="text" class="form-control" id="name" placeholder="Name" required> <br>
-            <input type="email" class="form-control" id="email_id" placeholder="Email id" required> <br>
-            <input type="tel" class="form-control" id="phone" placeholder="Phone Number" required> <br>
-            <input type="password" class="form-control" id="password" placeholder="Password" required> <br>
-            <input type="r-password" class="form-control" id="r-password" placeholder="Confirm Password" required>
+            <input type="text" class="form-control" name="name" placeholder="Name" required> <br>
+            <input type="email" class="form-control" name="email_id" placeholder="Email id" required> <br>
+            <input type="tel" class="form-control" name="phone" placeholder="Phone Number" required> <br>
+            <input type="password" class="form-control" name="password" placeholder="Password" required> <br>
+            <input type="password" class="form-control" name="r-password" placeholder="Confirm Password" required>
             <hr>
             <div class="form-row">
                 <div class="col">
@@ -39,15 +39,15 @@
                 </div>
                 <div class="col-sm-10">
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="gender" id="gen_male" value="male">
+                        <input class="form-check-input" type="radio" name="gender" id="gen_male" value="M">
                         <label class="form-check-label" for="gen_male">M</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="gender" id="gen_female" value="female">
+                        <input class="form-check-input" type="radio" name="gender" id="gen_female" value="F">
                         <label class="form-check-label" for="gen_female">F</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="gender" id="gen_other" value="other">
+                        <input class="form-check-input" type="radio" name="gender" id="gen_other" value="O">
                         <label class="form-check-label" for="gen_other">Other</label>
                     </div>
                 </div>

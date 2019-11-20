@@ -7,7 +7,7 @@
 </head>
 <body>
 <nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="home.php">Gym</a>
+    <a class="navbar-brand" href="home.php">Ufit</a>
     <a class="btn btn-outline-light" href="index.php" role="button">Logout</a>
 </nav>
 

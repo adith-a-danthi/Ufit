@@ -7,7 +7,7 @@
 </head>
 <body>
 <nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="index.php">Gym</a>
+    <a class="navbar-brand" href="index.php">Ufit</a>
 </nav>
 <br>
 <div class="card" style="width: 30%; border-radius: 25px; margin-left: auto; margin-right: auto">
