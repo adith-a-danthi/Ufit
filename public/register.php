@@ -1,10 +1,14 @@
+<?php
+require_once '../inc/db.php';
+require_once  '../inc/process_registration.php'
+?>
 <html>
 <head>
     <title>
         Register
     </title>
     <?php
-        require_once 'links.php';
+    require_once 'links.php';
     ?>
 </head>
 <body>
@@ -19,7 +23,7 @@
             <br>
             <h6>Basic Details</h6>
             <input type="text" class="form-control" name="name" placeholder="Name" required> <br>
-            <input type="email" class="form-control" name="email_id" placeholder="Email id" required> <br>
+            <input type="email" class="form-control" name="email" placeholder="Email id" required> <br>
             <input type="tel" class="form-control" name="phone" placeholder="Phone Number" required> <br>
             <input type="password" class="form-control" name="password" placeholder="Password" required> <br>
             <input type="password" class="form-control" name="r_password" placeholder="Confirm Password" required>
@@ -54,27 +58,35 @@
             </div>
             <br>
             <input type="number" class="form-control" name="height" placeholder="Height (cm)" required> <br>
-            <input type="number" class="form-control" name="weight" placeholder="Weight (kgs)" required> <br>
+            <input type="" class="form-control" name="weight" placeholder="Weight (kgs)" required> <br>
             <input type="text" class="form-control" name="goal" placeholder="Goal" required>
             <hr>
-            <div class="row">
-                <div class="col md-6">
-
+            <div class="row" style="padding: 10px">
+                <div class="col md-4">
+                    <p><label for="start_date" class="col col-form-label">Start Date</label></p>
+                    <input type="date" class="form-control" name="start_date" id="start_date" style="width: auto"
+                           required>
                 </div>
-            </div>
-            <div class="form-inline">
-                <label class="mr-sm-2" for="batch">Batch</label>
-                <select class="custom-select mr-sm-2" name="batch">
-                    <option selected>Time</option>
-                    <option value="1">5:00show</option>
-                    <option value="2">6:00</option>
-                    <option value="3">7:00</option>
-                    <option value="4">8:00</option>
-                    <option value="5">16:00</option>
-                    <option value="6">17:00</option>
-                    <option value="7">18:00</option>
-                    <option value="8">19:00</option>
-                </select>
+                <div class="col md-4">
+                    <p><label for="end_date" class="col col-form-label">End Date</label></p>
+                    <input type="date" class="form-control" name="end_date" id="end_date" style="width: auto" required>
+                </div>
+                <div class="col md-4">
+                    <p><label class="col col-form-label" for="batch">Batch</label></p>
+                    <select class="custom-select" name="batch" style="width: auto">
+                        <option disabled selected>Select Batch</option>
+                        <?php
+                        $query = 'SELECT * FROM BATCHES';
+                        $result = $conn->query($query);
+                        while ($row = $result->fetch_assoc()) {
+                            $opt = <<<OPT
+<option value="{$row['Batch_ID']}">{$row['Batch_Time']}</option>
+OPT;
+                            echo $opt;
+                        }
+                        ?>
+                    </select>
+                </div>
             </div>
             <br>
             <button class="btn btn-outline-dark">Register</button>
