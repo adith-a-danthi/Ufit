@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 error_log($conn->error);
                 die('Error while registering user');
             }
-            header('Location:membership.php');
+            header('Location:login.php');
         }
 
     }

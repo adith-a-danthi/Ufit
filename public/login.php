@@ -1,3 +1,9 @@
+<?php
+require_once "../inc/login_helper.php";
+init_session();
+require_once "../inc/process_login.php";
+?>
+
 <html>
 <head>
     <title>Login</title>
@@ -14,9 +20,9 @@
     <div class="card-body" >
         <form action="login.php" method="post">
             <h5>Login</h5> <br>
-            <input type="email" class="form-control" id="email_id" placeholder="Email id" required>
+            <input type="email" class="form-control" name="email" placeholder="Email id" required>
             <br>
-            <input type="password" class="form-control" id="password" placeholder="Password" required>
+            <input type="password" class="form-control" name="password" placeholder="Password" required>
             <br>
             <button class="btn btn-outline-dark">Login</button>
         </form>
