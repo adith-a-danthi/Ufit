@@ -19,7 +19,7 @@ require_once '../inc/db.php'
     <a class="navbar-brand" href="home.php">Ufit</a>
     <div class="form-inline">
         <a class="btn btn-outline-light" href="membership.php" role="button" style="margin-right: 10px">Membership</a>
-        <a class="btn btn-outline-light" href="index.php" role="button">Logout</a>
+        <a class="btn btn-outline-light" href="logout.php" role="button">Logout</a>
     </div>
 
 </nav>

@@ -18,6 +18,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     $result = $stmt->get_result();
 
     if($result->num_rows>0){
+        $row = $result->fetch_assoc();
+        $endTime = strtotime($row['End_Date']);
+        $today = time();
+
+        if ($endTime > $today){
+            die('Membership is already Active');
+        }
+
         $query_update = "UPDATE MEMBERSHIP SET Start_Date = ?, End_Date = ?, Fees = ? WHERE Mem_ID = ?";
         $stmt_update = $conn->prepare($query_update);
         $stmt_update->bind_param('ssii',$start_date,$end_date,$fees,$mem_id);

@@ -1,6 +1,10 @@
 <?php
 require_once "../inc/login_helper.php";
 init_session();
+if (is_logged_in() === true) {
+    header("Location:home.php");
+}
+
 require_once "../inc/process_login.php";
 ?>
 
