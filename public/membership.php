@@ -63,9 +63,6 @@
                     </div>
                 </div>
                 <hr>
-                <?php
-
-                ?>
                 <h5> Fees : <span id="fees"></span> </h5>
                 <hr>
                 <input type="hidden" name="fees" value="" />
