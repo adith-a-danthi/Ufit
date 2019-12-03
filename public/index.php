@@ -16,7 +16,7 @@ if (is_logged_in() === true) {
 <nav class="navbar navbar-dark bg-dark">
     <a class="navbar-brand" href="#" >Ufit</a>
     <div>
-        <a class="btn btn-outline-secondary" href="register.php" role="button">Register</a>
+        <a class="btn btn-outline-light" href="register.php" role="button">Register</a>
         <a class="btn btn-outline-light" href="login.php" role="button">Login</a>
     </div>
 </nav>
@@ -48,13 +48,47 @@ if (is_logged_in() === true) {
             <span class="sr-only">Next</span>
         </a>
     </div>-->
-
+    <br>
+    <div class="jumbotron">
+        <h1 class="display-4">Ufit</h1>
+        <p class="lead">The one stop for your fitness.</p>
+        <hr class="my-4">
+        <img src="images/gym1.jpg" class="d-block w-100" alt="">
+        <hr class="my-4">
+        <h4>Fees Structure</h4>
+        <p>Cost per Session = Rs 100 / Day</p>
+        <table class="table" style="text-align: center">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">Membership Duration (Days)</th>
+                <th scope="col">Discount</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>91 - 180</td>
+                <td>10%</td>
+            </tr>
+            <tr>
+                <td>181 - 365</td>
+                <td>20%</td>
+            </tr>
+            <tr>
+                <td>> 365</td>
+                <td>30%</td>
+            </tr>
+            </tbody>
+        </table>
+        <hr>
+    </div>
 </main>
-<footer class="footer">
+<footer class="footer" style="margin-bottom: 0px">
     <div class="container">
+        <hr>
         <span class="text-muted">Contact Us</span>
         <br>
         <span class="text-muted">+91 9874563210</span>
+        <hr>
     </div>
 </footer>
 </body>

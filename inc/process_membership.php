@@ -44,5 +44,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
         error_log($stmt_insert->error);
         die('Error while updating membership');
     }
-
+    header('Location:home.php');
 }

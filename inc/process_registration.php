@@ -16,8 +16,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $weight = $_POST['weight'];
     $goal = $_POST['goal'];
     $batch = $_POST['batch'];
-    $start_date = $_POST['start_date'];
-    $end_date = $_POST['end_date'];
+    /*$start_date = $_POST['start_date'];
+    $end_date = $_POST['end_date'];*/
 
     if ($password === $r_password) {
 

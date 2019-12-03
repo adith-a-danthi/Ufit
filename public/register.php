@@ -22,6 +22,7 @@ require_once  '../inc/process_registration.php'
             <h5 style="text-align: center">Create Account</h5>
             <br>
             <h6>Basic Details</h6>
+            <hr>
             <input type="text" class="form-control" name="name" placeholder="Name" required> <br>
             <input type="email" class="form-control" name="email" placeholder="Email id" required> <br>
             <input type="tel" class="form-control" name="phone" placeholder="Phone Number" required> <br>
@@ -62,7 +63,7 @@ require_once  '../inc/process_registration.php'
             <input type="text" class="form-control" name="goal" placeholder="Goal" required>
             <hr>
             <div class="row" style="padding: 10px">
-                <div class="col md-4">
+                <!--<div class="col md-4">
                     <p><label for="start_date" class="col col-form-label">Start Date</label></p>
                     <input type="date" class="form-control" name="start_date" id="start_date" style="width: auto"
                            required>
@@ -70,7 +71,7 @@ require_once  '../inc/process_registration.php'
                 <div class="col md-4">
                     <p><label for="end_date" class="col col-form-label">End Date</label></p>
                     <input type="date" class="form-control" name="end_date" id="end_date" style="width: auto" required>
-                </div>
+                </div>-->
                 <div class="col md-4">
                     <p><label class="col col-form-label" for="batch">Batch</label></p>
                     <select class="custom-select" name="batch" style="width: auto">
