@@ -1,0 +1,72 @@
+CREATE TABLE `MEMBERS` (
+	`Mem_ID` int NOT NULL AUTO_INCREMENT,
+	`Mem_Name` varchar(255) NOT NULL,
+	`Mem_DOB` DATE NOT NULL,
+	`Mem_email` varchar(255) NOT NULL,
+	`Mem_password` varchar(255) NOT NULL,
+	`Mem_Phone` varchar(15) NOT NULL,
+	`Mem_Gender` char(1) NOT NULL,
+	`Batch_ID` int NOT NULL,
+	`Mem_Height` int unsigned NOT NULL,
+	`Mem_Weight` int unsigned NOT NULL,
+	`Mem_BMI` DECIMAL(4,2),
+	`Mem_Goal` varchar(255) NOT NULL,
+	PRIMARY KEY (`Mem_ID`)
+);
+
+CREATE TABLE `MEMBERSHIP` (
+	`Membership_ID` int NOT NULL AUTO_INCREMENT,
+	`Mem_ID` int NOT NULL,
+	`Gym_ID` int NOT NULL,
+	`Start_Date` DATE NOT NULL,
+	`End_Date` DATE NOT NULL,
+	`Fees` int,
+	PRIMARY KEY (`Membership_ID`)
+);
+
+CREATE TABLE `GYM` (
+	`Gym_ID` int NOT NULL AUTO_INCREMENT,
+	`Contact` varchar(15) NOT NULL,
+	`Location` varchar(255) NOT NULL,
+	PRIMARY KEY (`Gym_ID`)
+);
+
+CREATE TABLE `BATCHES` (
+	`Batch_ID` int NOT NULL AUTO_INCREMENT,
+	`Batch_Time` varchar(255) NOT NULL,
+	`Gym_ID` int NOT NULL,
+	`T_ID` int NOT NULL,
+	PRIMARY KEY (`Batch_ID`)
+);
+
+CREATE TABLE `TRAINER` (
+	`T_ID` int NOT NULL AUTO_INCREMENT,
+	`T_Name` varchar(255) NOT NULL,
+	`T_Gender` char(1) NOT NULL,
+	`T_Phone` varchar(15) NOT NULL,
+	`T_Add` varchar(255) NOT NULL,
+	`Gym_ID` int(25) NOT NULL,
+	PRIMARY KEY (`T_ID`)
+);
+
+ALTER TABLE `MEMBERS` ADD CONSTRAINT `MEMBERS_fk0` FOREIGN KEY (`Batch_ID`) REFERENCES `BATCHES`(`Batch_ID`);
+
+ALTER TABLE `MEMBERSHIP` ADD CONSTRAINT `MEMBERSHIP_fk0` FOREIGN KEY (`Mem_ID`) REFERENCES `MEMBERS`(`Mem_ID`);
+
+ALTER TABLE `MEMBERSHIP` ADD CONSTRAINT `MEMBERSHIP_fk1` FOREIGN KEY (`Gym_ID`) REFERENCES `GYM`(`Gym_ID`);
+
+ALTER TABLE `BATCHES` ADD CONSTRAINT `BATCHES_fk0` FOREIGN KEY (`Gym_ID`) REFERENCES `GYM`(`Gym_ID`);
+
+ALTER TABLE `BATCHES` ADD CONSTRAINT `BATCHES_fk1` FOREIGN KEY (`T_ID`) REFERENCES `TRAINER`(`T_ID`);
+
+ALTER TABLE `TRAINER` ADD CONSTRAINT `TRAINER_fk0` FOREIGN KEY (`Gym_ID`) REFERENCES `GYM`(`Gym_ID`);
+
+DELIMITER //
+CREATE TRIGGER cal_bmi 
+AFTER INSERT ON MEMBERS
+FOR EACH ROW
+BEGIN
+CALL calculate_bmi(Mem_ID,Mem_Height,Mem_Weight);
+END; //
+DELIMITER ;
+
